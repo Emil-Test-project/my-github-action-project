@@ -2,7 +2,7 @@
   "extends": "ts-config-single-spa",
   "files": ["src/emil-test-project-root-config.ts"],
   "compilerOptions": {
-    "declarationDir": "dist"
+    "declarationDir": "src"
   },
   "include": ["src/**/*"],
   "exclude": ["src/**/*.test*"]

@@ -21,6 +21,9 @@ jobs:
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: "Setup actions"
         uses: actions/checkout@v3
@@ -34,8 +37,8 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: "publish package"
         run: |
-          npm run test 
-          npm run build
+          npm ci 
+          npm test
           echo @OWNER:registry=https://npm.pkg.github.com/ >> .npmrc
           npm publish
         env:

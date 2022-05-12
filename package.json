@@ -7,11 +7,9 @@
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "prepare": "husky install",
-    "build": "npm run build",
+    "build": "concurrently npm:build:*",
     "build:webpack": "webpack --mode=production",
-    "build:types": "tsc",
-    "postversion": "npm publish",
-    "prepublishOnly": "git push origin --follow-tags"
+    "build:types": "tsc"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -48,6 +46,10 @@
     "single-spa": "^5.9.3",
     "single-spa-layout": "^1.6.0"
   },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
+  "repository": "github:Emil-Test-project/my-github-action-project",
   "types": "dist/emil-test-project-root-config.d.ts",
   "optionalDependencies": {
     "fsevents": "^2.3.2"

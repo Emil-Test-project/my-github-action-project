@@ -9,7 +9,9 @@
     "prepare": "husky install",
     "build": "npm run build",
     "build:webpack": "webpack --mode=production",
-    "build:types": "tsc"
+    "build:types": "tsc",
+    "postversion": "npm publish",
+    "prepublishOnly": "git push origin --follow-tags"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",

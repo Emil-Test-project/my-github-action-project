@@ -1,6 +1,10 @@
 {
   "name": "@emil-test-project/root-config",
   "version": "1.0.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": "git:Emil-Test-project/my-github-action-project",
   "scripts": {
     "start": "webpack serve --port 9000 --env isLocal",
     "lint": "eslint src --ext js,ts,tsx",
@@ -47,10 +51,6 @@
     "single-spa": "^5.9.3",
     "single-spa-layout": "^1.6.0"
   },
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
-  },
-  "repository": "github:Emil-Test-project/my-github-action-project",
   "types": "dist/emil-test-project-root-config.d.ts",
   "optionalDependencies": {
     "fsevents": "^2.3.2"

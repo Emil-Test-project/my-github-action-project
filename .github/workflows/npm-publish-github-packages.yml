@@ -39,7 +39,7 @@ jobs:
         run: |
           npm ci 
           npm test
-          echo @OWNER:registry=https://npm.pkg.github.com/ >> .npmrc
+          echo @Emil-Test-project:registry=https://npm.pkg.github.com/ >> .npmrc
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -40,7 +40,7 @@ jobs:
           npm ci 
           npm test
           echo @emil-test-project:registry=https://npm.pkg.github.com/ >> .npmrc
-          npm publish
+          npm publish --registry https://npm.pkg.github.com/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

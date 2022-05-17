@@ -39,6 +39,7 @@ jobs:
         run: |
           npm ci 
           npm test
+          npm adduser --scope=@emil-test-project --registry=https://npm.pkg.github.com
           echo @emil-test-project:registry=https://npm.pkg.github.com/ >> .npmrc
           npm publish --registry https://npm.pkg.github.com/
         env:

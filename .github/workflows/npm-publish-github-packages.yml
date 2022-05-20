@@ -30,6 +30,7 @@ jobs:
       - name: "npm/registry setup"
         uses: actions/setup-node@v3
         with:
+          always-auth: true
           node-version: 16
           registry-url: https://npm.pkg.github.com/
           scope: "@emil-test-project"

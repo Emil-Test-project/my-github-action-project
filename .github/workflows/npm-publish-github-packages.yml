@@ -34,7 +34,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: "@emil-test-project"
         env:
-          NODE_AUTH_TOKEN: ${{ _authToken=${NODE_AUTH_TOKEN} }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: "publish package"
         run: |
           npm ci 
@@ -42,5 +42,5 @@ jobs:
           echo @emil-test-project:registry=https://npm.pkg.github.com/ >> .npmrc
           npm publish --registry https://npm.pkg.github.com/
         env:
-          NODE_AUTH_TOKEN: ${{ _authToken=${NODE_AUTH_TOKEN} }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

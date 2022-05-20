@@ -37,14 +37,10 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: "publish package"
-        with:
-          always-auth: true
-          registry-url: https://npm.pkg.github.com/
-          scope: "@emil-test-project"
         run: |
           npm ci 
           npm test
-          echo @emil-test-project:registry=https://npm.pkg.github.com/ >> .npmrc
+          npm adduser
           npm publish --registry https://npm.pkg.github.com/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

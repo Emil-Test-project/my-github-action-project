@@ -4,7 +4,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "repository": "git:Emil-Test-project/my-github-action-project",
+  "repository": "git://github.com/Emil-Test-project/my-github-action-project.git",
   "scripts": {
     "start": "webpack serve --port 9000 --env isLocal",
     "lint": "eslint src --ext js,ts,tsx",
